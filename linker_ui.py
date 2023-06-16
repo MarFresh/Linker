@@ -13,3 +13,7 @@ class LinkerUi:
     login.mainloop()
   def send(self):
     pass
+  def get_password(self):
+    return self.password
+  def get_email(self):
+    return self.email
