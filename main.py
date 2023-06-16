@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-from customtkinter import *
+from linker_ui import LinkerUi as ui
 class Linker:
   def __init__():
     #set apearance
@@ -12,13 +12,9 @@ class Linker:
     self.soup = BeautifulSoup(self.response, 'html.parser')
     
     start(self):
-      app = CTk()
-      app.geometry("400x780")
-      app.title("CustomTkinter simple_example.py")
-      title=CTkLabel(text="LinkedIn Credentials")
-      e=CTkEntry(placeholder="LinkedIn Email").pack()
-      p=CTkEntry(placeholder="LinkedIn Password").pack()
-      app.mainloop()
+      ui.login()
+      self.username=ui.get_username()
+      self.password=ui.get_password()
       # Send a POST request with the login data and check if it was successful
       if requests.post(self.login_url, json={'username': self.username, 'password': self.password}).ok:
           login=True
