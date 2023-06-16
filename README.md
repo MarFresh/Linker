@@ -1,4 +1,4 @@
-<font size="10">Linker</font>
+<span style="color: yellow;">Linker</span>
 
 --------
 Linker is a project where you sign in to LinkedIn and the app shows you the jobs you have applied for.<br/>
