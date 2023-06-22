@@ -53,7 +53,7 @@ class LinkerUi:
     self.appearance_mode_optionemenu.set("Dark")
     cookie=
     self.scaling_optionemenu.set("100%")
-  def ajobs():
+  def ajobs(self):
     main.destroy()
     main=CTk()
     self.title("Jobs")
@@ -82,9 +82,20 @@ class LinkerUi:
     scaling_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["80%", "90%", "100%", "110%", "120%"],
                                                            command=self.change_scaling_event)
     scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
+
+    self.jobwi = customtkinter.CTkFrame(self)
     
     appearance_mode_optionemenu.set(cookie)
     scaling_optionemenu.set("100%")
+
+    self.tabview = customtkinter.CTkTabview(self, width=250)
+        self.tabview.grid(row=0, column=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
+        self.tabview.add("CTkTabview")
+        self.tabview.add("Tab 2")
+        self.tabview.add("Tab 3")
+        self.tabview.tab("CTkTabview").grid_columnconfigure(0, weight=1)  # configure grid of individual tabs
+        self.tabview.tab("Tab 2").grid_columnconfigure(0, weight=1)
+    
     def change_appearance_mode_event(self, new_appearance_mode: str):
         customtkinter.set_appearance_mode(new_appearance_mode)
 
