@@ -56,7 +56,7 @@ class LinkerUi:
   def ajobs():
     main.destroy()
     main=CTk()
-    self.title("CustomTkinter complex_example.py")
+    self.title("Jobs")
     geometry(f"{1100}x{580}")
     
     # configure grid layout (4x4)
