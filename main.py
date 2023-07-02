@@ -8,3 +8,4 @@ class Linker:
     
     start(self):
       ui.login()
+      password=ui.password
