@@ -7,4 +7,4 @@ class Linker:
     customtkinter.set_default_color_theme("blue")
     
     start(self):
-      ui.start(login)
+      ui.login()
